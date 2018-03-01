@@ -1,0 +1,36 @@
+
+基于django 1.8和pytho 3 django by example
+1.新建project:
+django-admin.py startproject project_name
+
+2.新建app:
+python manage.py startapp app_name
+
+将app导入project：
+打开project目录下setting.py,在INSTALLED_APPS = 里添加app
+
+3.创建数据库表：
+python manage.py migrate
+
+4.创建数据库表 或 更改数据库表或字段：
+python manage.py makemigrations
+
+5.使用开发服务器：
+python manage.py runserver
+# 当提示端口被占用的时候，可以用其它端口：
+python manage.py runserver 8001
+python manage.py runserver 9999
+（当然也可以kill掉占用端口的进程，具体后面有讲，此处想知道的同学可查下 lsof 命令用法）
+
+6.监听机器所有可用 ip （电脑可能有多个内网ip或多个外网ip）
+python manage.py runserver 0.0.0.0:8000
+# 如果是外网或者局域网电脑上可以用其它电脑查看开发服务器
+# 访问对应的 ip加端口，比如 http://172.16.20.2:8000
+
+6.在app根目录下建templates文件夹，存放所有的html文件
+
+7.在app根目录下建static文件夹，存放所有的css,javascript文件
+
+8.修改app目录下views.py文件，导入html文件
+
+9.修改project目录下urls.py文件，添加url地址

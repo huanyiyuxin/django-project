@@ -30,6 +30,8 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
+SITE_ID = 1
+
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,6 +41,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 	'blog',
 	'taggit',
+	'django.contrib.sites',
+	'django.contrib.sitemaps',
+	'haystack',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -109,3 +114,10 @@ EMAIL_HOST_USER = '1839846472@qq.com'
 EMAIL_HOST_PASSWORD = 'nkscawsatxkgbegj'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'URL': 'http://127.0.0.1:8983/solr/blog'
+    },
+}

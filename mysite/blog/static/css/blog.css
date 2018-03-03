@@ -2,6 +2,8 @@ body {
     margin:0;
     padding:0;
     font-family:helvetica, sans-serif; 
+	background-image:url(background.jpg);
+	background-size:cover;
 }
 
 a { 
@@ -32,6 +34,7 @@ h2 {
     padding:10px;
     background:#efefef; 
     height:100%;
+	opacity:0.6;
 }
 
 p.date { 
@@ -84,6 +87,7 @@ input[type=submit] {
 }
 .comment:nth-child(even) {
     background:#efefef;
+	opacity:0.6;
 }
 .comment .info {
     font-weight:bold;

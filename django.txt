@@ -34,4 +34,15 @@ python manage.py runserver 0.0.0.0:8000
 
 9.修改project目录下urls.py文件，添加url地址
 
-10.测试
+10.关于在django框架里取已登录用户名字的问题
+在 views里取值是这样的
+
+request.user.username
+
+
+而在模板页面取值是这样的：
+
+{{request.user}}
+
+判断是否通过验证是这样的
+{% if request.user.is_authenticated %}
